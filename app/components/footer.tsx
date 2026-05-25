@@ -7,14 +7,14 @@ import { Heart, X } from 'lucide-react'
 function FooterModal({ title, children, onClose }: { title: string; children: React.ReactNode; onClose: () => void }) {
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm" onClick={onClose}>
-      <div className="bg-beige-50 rounded-lg shadow-xl max-w-lg w-full max-h-[80vh] overflow-y-auto p-6 sm:p-8" onClick={(e: any) => e?.stopPropagation?.()}>
-        <div className="flex items-center justify-between mb-4">
-          <h3 className="font-heading text-xl text-charcoal">{title}</h3>
+      <div className="bg-white rounded-lg shadow-xl max-w-2xl w-full max-h-[85vh] overflow-y-auto p-6 sm:p-8" onClick={(e: any) => e?.stopPropagation?.()}>
+        <div className="flex items-center justify-between mb-4 border-b pb-2">
+          <h3 className="font-heading text-xl text-charcoal font-semibold">{title}</h3>
           <button onClick={onClose} className="p-1 rounded-full hover:bg-beige-200 transition-colors">
             <X size={20} className="text-charcoal/60" />
           </button>
         </div>
-        <div className="text-charcoal/75 text-sm leading-relaxed space-y-3">
+        <div className="text-charcoal/75 text-sm leading-relaxed space-y-4">
           {children}
         </div>
       </div>
@@ -52,14 +52,15 @@ export function Footer() {
             </p>
           </div>
 
+          {/* SİTENİN EN ALTINDAKİ AYRI AYRI DURAN İKİ BUTON */}
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t border-beige-800">
             <div className="flex items-center gap-4 text-xs text-beige-500">
               <button onClick={() => setShowImpressum(true)} className="hover:text-gold-light transition-colors">
-                {t('Impressum', 'K\u00fcnye')}
+                {t('Impressum', 'Künye')}
               </button>
               <span className="text-beige-700">|</span>
               <button onClick={() => setShowDatenschutz(true)} className="hover:text-gold-light transition-colors">
-                {t('Datenschutz', 'Gizlilik Politikas\u0131')}
+                {t('Datenschutz', 'Gizlilik Politikası')}
               </button>
             </div>
 
@@ -72,41 +73,86 @@ export function Footer() {
         </div>
       </footer>
 
+      {/* 1. BUTON: KÜNYE MODALI (SADECE KÜNYEYE TIKLAYINCA AÇILIR) */}
       {showImpressum && (
-        <FooterModal title={t('Impressum', 'K\u00fcnye')} onClose={() => setShowImpressum(false)}>
-          <p><strong>Nelly</strong></p>
-          <p>{t('Medium & Spirituelle Begleitung', 'Medyum & Spirit\u00fcel Rehberlik')}</p>
-          <p>{t('Telefon', 'Telefon')}: 0176 24003253</p>
-          <p>E-Mail: info@nellymedium.de</p>
-          <p className="mt-4 text-xs text-charcoal/50">
-            {t(
-              'Angaben gem\u00e4\u00df \u00a7 5 TMG. Inhaltlich Verantwortliche: Nelly. Die vollst\u00e4ndigen Impressumsdaten werden nach Fertigstellung der Seite erg\u00e4nzt.',
-              'TMG \u00a7 5 uyar\u0131nca bilgiler. Sorumlu ki\u015fi: Nelly. Tam k\u00fcnye bilgileri sayfa tamamland\u0131ktan sonra eklenecektir.'
-            )}
-          </p>
+        <FooterModal title={t('Impressum', 'Künye')} onClose={() => setShowImpressum(false)}>
+          {t(
+            <>
+              <h4 className="font-semibold text-charcoal text-base">Angaben gemäß § 5 DDG:</h4>
+              <p className="pl-2 border-l-2 border-gray-200 my-2">
+                <strong>[Kiralayacağınız Resmi Ad Soyad]</strong><br />
+                [Kiralık İşletme/Servis Adresi]<br />
+                [Posta Kodu und Stadt / Deutschland]
+              </p>
+              <h4 className="font-semibold text-charcoal text-base mt-4">Kontakt:</h4>
+              <p className="pl-2 border-l-2 border-gray-200 my-2">
+                Telefon: 0176 24003253<br />
+                E-Mail: info@nellymedium.de
+              </p>
+              <h4 className="font-semibold text-charcoal text-base mt-4">Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV:</h4>
+              <p className="pl-2 border-l-2 border-gray-200 my-2">
+                <strong>[Kiralayacağınız Resmi Ad Soyad]</strong><br />
+                [Kiralık İşletme/Servis Adresi]<br />
+                [Posta Kodu und Stadt / Deutschland]
+              </p>
+              <p className="text-xs text-gray-400 mt-6 pt-2 border-t">Quelle: e-recht24.de</p>
+            </>,
+            <>
+              <h4 className="font-semibold text-charcoal text-base">Alman Dijital Hizmetler Yasası (DDG) § 5 uyarınca bilgiler:</h4>
+              <p className="pl-2 border-l-2 border-gray-200 my-2">
+                <strong>[Kiralayacağınız Resmi Ad Soyad]</strong><br />
+                [Kiralık İşletme/Servis Adresi]<br />
+                [Posta Kodu ve Şehir / Almanya]
+              </p>
+              <h4 className="font-semibold text-charcoal text-base mt-4">İletişim:</h4>
+              <p className="pl-2 border-l-2 border-gray-200 my-2">
+                Telefon: 0176 24003253<br />
+                E-Mail: info@nellymedium.de
+              </p>
+              <h4 className="font-semibold text-charcoal text-base mt-4">MStV § 18 Abs. 2 uyarınca içerikten sorumlu kişi:</h4>
+              <p className="pl-2 border-l-2 border-gray-200 my-2">
+                <strong>[Kiralayacağınız Resmi Ad Soyad]</strong><br />
+                [Kiralık İşletme/Servis Adresi]<br />
+                [Posta Kodu ve Şehir / Almanya]
+              </p>
+            </>
+          )}
         </FooterModal>
       )}
 
+      {/* 2. BUTON: GİZLİLİK MODALI (SADECE GİZLİLİĞE TIKLAYINCA AÇILIR) */}
       {showDatenschutz && (
-        <FooterModal title={t('Datenschutzerkl\u00e4rung', 'Gizlilik Politikas\u0131')} onClose={() => setShowDatenschutz(false)}>
-          <p>
-            {t(
-              'Der Schutz deiner pers\u00f6nlichen Daten ist mir wichtig. Diese Website erhebt und speichert personenbezogene Daten nur im Rahmen von Kontaktanfragen. Es werden keine Cookies zu Tracking-Zwecken verwendet.',
-              'Ki\u015fisel verilerinin korunmas\u0131 benim i\u00e7in \u00f6nemlidir. Bu web sitesi, yaln\u0131zca ileti\u015fim talepleri kapsam\u0131nda ki\u015fisel verileri toplar ve saklar. Takip ama\u00e7l\u0131 \u00e7erezler kullan\u0131lmaz.'
-            )}
-          </p>
-          <p>
-            {t(
-              'Kontaktformular: Wenn du mir \u00fcber das Kontaktformular eine Nachricht sendest, werden deine Angaben (Name, E-Mail, Nachricht) zwecks Bearbeitung gespeichert.',
-              '\u0130leti\u015fim formu: Bana ileti\u015fim formu \u00fczerinden bir mesaj g\u00f6nderdi\u011finde, bilgilerin (ad, e-posta, mesaj) i\u015fleme al\u0131nmak \u00fczere saklan\u0131r.'
-            )}
-          </p>
-          <p className="mt-4 text-xs text-charcoal/50">
-            {t(
-              'Die vollst\u00e4ndige Datenschutzerkl\u00e4rung wird nach Fertigstellung der Seite erg\u00e4nzt.',
-              'Tam gizlilik politikas\u0131 sayfa tamamland\u0131ktan sonra eklenecektir.'
-            )}
-          </p>
+        <FooterModal title={t('Datenschutzerklärung', 'Gizlilik Politikası')} onClose={() => setShowDatenschutz(false)}>
+          {t(
+            <>
+              <h4 className="font-semibold text-charcoal text-base">1. Datenschutz auf einen Blick</h4>
+              <p>Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften (DSGVO).</p>
+              <h4 className="font-semibold text-charcoal text-base mt-4">2. Hosting und CDN (Cloudflare)</h4>
+              <p>Wir hosten unsere Website bei Cloudflare Pages. Anbieter ist die Cloudflare Inc., 101 Townsend St., San Francisco, CA 94107, USA. Technisch wird der Informationsverkehr zwischen Ihrem Browser und unserer Website über das Netzwerk von Cloudflare geleitet, um die Sicherheit und Stabilität zu gewährleisten. Hierbei können Logfiles inklusive Ihrer IP-Adresse verarbeitet werden. Dies erfolgt auf Grundlage unseres berechtigten Interesses an einer sicheren Bereitstellung (Art. 6 Abs. 1 lit. f DSGVO).</p>
+              <h4 className="font-semibold text-charcoal text-base mt-4">3. Verantwortliche Stelle</h4>
+              <p className="pl-2 border-l-2 border-gray-200 my-2">
+                <strong>[Kiralayacağınız Resmi Ad Soyad]</strong><br />
+                [Kiralık İşletme/Servis Adresi]<br />
+                E-Mail: info@nellymedium.de
+              </p>
+              <h4 className="font-semibold text-charcoal text-base mt-4">4. Ihre Rechte</h4>
+              <p>Sie haben jederzeit das Recht auf unentgeltliche Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten sowie ein Recht auf Berichtigung oder Löschung dieser Daten.</p>
+            </>,
+            <>
+              <h4 className="font-semibold text-charcoal text-base">1. Bir Bakışta Veri Koruma</h4>
+              <p>Bu sitenin işletmecisi kişisel verilerinizin korunmasını çok ciddiye almaktadır. Kişisel verilerinizi gizli tutuyor ve yasal veri koruma düzenlemelerine (GDPR/DSGVO) uygun olarak işliyoruz.</p>
+              <h4 className="font-semibold text-charcoal text-base mt-4">2. Barındırma ve CDN (Cloudflare)</h4>
+              <p>Web sitemiz Cloudflare Pages (Cloudflare Inc., 101 Townsend St., San Francisco, CA 94107, USA) üzerinde barındırılmaktadır. Sitenin güvenliğini ve hızını sağlamak adına tarayıcınız ile sitemiz arasındaki trafik Cloudflare ağı üzerinden iletilir. Bu işlem sırasında IP adresiniz dahil olmak üzere teknik log dosyaları işlenebilir. Bu, Art. 6 Abs. 1 lit. f DSGVO uyarınca meşru menfaatimize dayanmaktadır.</p>
+              <h4 className="font-semibold text-charcoal text-base mt-4">3. Sorumlu Kişi</h4>
+              <p className="pl-2 border-l-2 border-gray-200 my-2">
+                <strong>[Kiralayacağınız Resmi Ad Soyad]</strong><br />
+                [Kiralık İşletme/Servis Adresi]<br />
+                E-Mail: info@nellymedium.de
+              </p>
+              <h4 className="font-semibold text-charcoal text-base mt-4">4. Haklarınız</h4>
+              <p>Kişisel verilerinizin kaynağı, alıcısı ve işlenme amacı hakkında her zaman ücretsiz bilgi alma, ayrıca bu verilerin düzeltilmesini veya silinmesini talep etme hakkına sahipsiniz.</p>
+            </>
+          )}
         </FooterModal>
       )}
     </>
