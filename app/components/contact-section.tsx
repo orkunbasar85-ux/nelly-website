@@ -71,10 +71,10 @@ export function ContactSection() {
             </h2>
             <div className="w-16 h-0.5 bg-gold mx-auto mt-5" />
             <p className="text-charcoal/70 mt-6 max-w-2xl mx-auto leading-relaxed">
-              {t(
-                'Du hast Fragen oder möchtest spüren, ob es passt? Du kannst mich auf türkisch oder deutsch kontaktieren. Ich freue mich auf deine Nachricht – und vielleicht auf unser baldiges Gespräch.',
-                'Soruların mı var ya da çalışmanın sana uygun olup olmadığını hissetmek mi istiyorsun? Mesajını sabırsızlıkla bekliyorum – belki de yakında görüşmek üzere.'
-              )}
+             {t(
+  'Du hast Fragen oder möchtest spüren, ob es passt? Du kannst mich auf Türkisch oder Deutsch kontaktieren. Ich freue mich auf deine Nachricht – und vielleicht auf unser baldiges Gespräch.',
+  'Sorularınız mı var, yoksa enerjimizin uyumunu mu hissetmek istiyorsunuz? Benimle Türkçe veya Almanca dillerinde iletişime geçebilirsiniz. Mesajınızı sabırsızlıkla bekliyorum – belki de yakında görüşmek üzere.'
+)}
             </p>
           </div>
         </FadeInSection>
