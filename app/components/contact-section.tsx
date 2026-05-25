@@ -71,10 +71,10 @@ export function ContactSection() {
             </h2>
             <div className="w-16 h-0.5 bg-gold mx-auto mt-5" />
             <p className="text-charcoal/70 mt-6 max-w-2xl mx-auto leading-relaxed">
-             {t(
-  'Du hast Fragen oder möchtest spüren, ob es passt? Du kannst mich auf Türkisch oder Deutsch kontaktieren. Ich freue mich auf deine Nachricht – und vielleicht auf unser baldiges Gespräch.',
-  'Sorularınız mı var, yoksa enerjimizin uyumunu mu hissetmek istiyorsunuz? Benimle Türkçe veya Almanca dillerinde iletişime geçebilirsiniz. Mesajınızı sabırsızlıkla bekliyorum – belki de yakında görüşmek üzere.'
-)}
+              {t(
+                'Du hast Fragen oder möchtest spüren, ob es passt? Du kannst mich auf Türkisch oder Deutsch kontaktieren. Ich freue mich auf deine Nachricht – und vielleicht auf unser baldiges Gespräch.',
+                'Sorularınız mı var, yoksa enerjimizin uyumunu mu hissetmek istiyorsunuz? Benimle Türkçe veya Almanca dillerinde iletişime geçebilirsiniz. Mesajınızı sabırsızlıkla bekliyorum – belki de yakında görüşmek üzere.'
+              )}
             </p>
           </div>
         </FadeInSection>
@@ -209,10 +209,11 @@ export function ContactSection() {
                 </button>
               )}
 
-              <p className="text-xs text-charcoal/40 text-center">
+              {/* YASAL STANDARTLARA UYGUN GİZLİLİK ONAY METNİ */}
+              <p className="text-[11px] text-charcoal/50 text-center leading-relaxed mt-3">
                 {t(
-                  'Deine Daten werden vertraulich behandelt und nicht an Dritte weitergegeben.',
-                  'Bilgilerin gizli tutulur ve üçüncü kişilerle paylaşılmaz.'
+                  'Mit dem Absenden erklären Sie sich mit der Verarbeitung Ihrer Daten gemäß unserer Datenschutzerklärung einverstanden.',
+                  'Formu göndererek, verilerinizin Gizlilik Politikası uyarınca işlenmesini kabul etmiş olursunuz.'
                 )}
               </p>
             </form>
