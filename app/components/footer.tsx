@@ -52,7 +52,6 @@ export function Footer() {
             </p>
           </div>
 
-          {/* SİTENİN EN ALTINDAKİ AYRI AYRI DURAN İKİ BUTON */}
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t border-beige-800">
             <div className="flex items-center gap-4 text-xs text-beige-500">
               <button onClick={() => setShowImpressum(true)} className="hover:text-gold-light transition-colors">
@@ -73,7 +72,6 @@ export function Footer() {
         </div>
       </footer>
 
-      {/* 1. BUTON: KÜNYE MODALI (SADECE KÜNYEYE TIKLAYINCA AÇILIR) */}
       {showImpressum && (
         <FooterModal title={t('Impressum', 'Künye')} onClose={() => setShowImpressum(false)}>
           {t(
@@ -87,7 +85,7 @@ export function Footer() {
               <h4 className="font-semibold text-charcoal text-base mt-4">Kontakt:</h4>
               <p className="pl-2 border-l-2 border-gray-200 my-2">
                 Telefon: 0176 24003253<br />
-                E-Mail: info@nellymedium.de
+                E-Mail: i.nelly@hotmail.de
               </p>
               <h4 className="font-semibold text-charcoal text-base mt-4">Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV:</h4>
               <p className="pl-2 border-l-2 border-gray-200 my-2">
@@ -107,7 +105,7 @@ export function Footer() {
               <h4 className="font-semibold text-charcoal text-base mt-4">İletişim:</h4>
               <p className="pl-2 border-l-2 border-gray-200 my-2">
                 Telefon: 0176 24003253<br />
-                E-Mail: info@nellymedium.de
+                E-Mail: i.nelly@hotmail.de
               </p>
               <h4 className="font-semibold text-charcoal text-base mt-4">MStV § 18 Abs. 2 uyarınca içerikten sorumlu kişi:</h4>
               <p className="pl-2 border-l-2 border-gray-200 my-2">
@@ -120,7 +118,6 @@ export function Footer() {
         </FooterModal>
       )}
 
-      {/* 2. BUTON: GİZLİLİK MODALI (SADECE GİZLİLİĞE TIKLAYINCA AÇILIR) */}
       {showDatenschutz && (
         <FooterModal title={t('Datenschutzerklärung', 'Gizlilik Politikası')} onClose={() => setShowDatenschutz(false)}>
           {t(
@@ -133,10 +130,10 @@ export function Footer() {
               <p className="pl-2 border-l-2 border-gray-200 my-2">
                 <strong>[Kiralayacağınız Resmi Ad Soyad]</strong><br />
                 [Kiralık İşletme/Servis Adresi]<br />
-                E-Mail: info@nellymedium.de
+                E-Mail: i.nelly@hotmail.de
               </p>
               <h4 className="font-semibold text-charcoal text-base mt-4">4. Ihre Rechte</h4>
-              <p>Sie haben jederzeit das Recht auf unentgeltliche Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten sowie ein Recht auf Berichtigung oder Löschung dieser Daten.</p>
+              <p>Sie hat jederzeit das Recht auf unentgeltliche Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten sowie ein Recht auf Berichtigung oder Löschung dieser Daten.</p>
             </>,
             <>
               <h4 className="font-semibold text-charcoal text-base">1. Bir Bakışta Veri Koruma</h4>
@@ -147,7 +144,7 @@ export function Footer() {
               <p className="pl-2 border-l-2 border-gray-200 my-2">
                 <strong>[Kiralayacağınız Resmi Ad Soyad]</strong><br />
                 [Kiralık İşletme/Servis Adresi]<br />
-                E-Mail: info@nellymedium.de
+                E-Mail: i.nelly@hotmail.de
               </p>
               <h4 className="font-semibold text-charcoal text-base mt-4">4. Haklarınız</h4>
               <p>Kişisel verilerinizin kaynağı, alıcısı ve işlenme amacı hakkında her zaman ücretsiz bilgi alma, ayrıca bu verilerin düzeltilmesini veya silinmesini talep etme hakkına sahipsiniz.</p>
