@@ -31,7 +31,7 @@ export function Footer() {
   const quoteTR = '\u201e\u0130nsan ancak kalbiyle iyi g\u00f6rebilir. Ger\u00e7ek olan\u0131 g\u00f6zler g\u00f6remez.\u201c'
 
   const disclaimerDE = 'Meine Arbeit dient der energetischen und spirituellen Begleitung. Sie ersetzt keine medizinische Behandlung oder Diagnose, sondern versteht sich als Erg\u00e4nzung auf seelisch-energetischer Ebene.'
-  const disclaimerTR = '\u00c7al\u0131\u015fmalar\u0131m t\u0131bbi te\u015fhis veya tedavi yerine ge\u00e7mez, ancak ruhsal-enerjik d\u00fczeyde tamamlay\u0131c\u0131 bir destek sunar.'
+  const disclaimerTR = '\u00c7al\u0131\u015fmalar\u0131m t\u0131bbi te\u015fhis oder tedavi yerine ge\u00e7mez, ancak ruhsal-enerjik d\u00fczeyde tamamlay\u0131c\u0131 bir destek sunar.'
 
   return (
     <>
@@ -74,82 +74,82 @@ export function Footer() {
 
       {showImpressum && (
         <FooterModal title={t('Impressum', 'Künye')} onClose={() => setShowImpressum(false)}>
-          {t(
-            <>
-              <h4 className="font-semibold text-charcoal text-base">Angaben gemäß § 5 DDG:</h4>
-              <p className="pl-2 border-l-2 border-gray-200 my-2">
-                <strong>[Kiralayacağınız Resmi Ad Soyad]</strong><br />
-                [Kiralık İşletme/Servis Adresi]<br />
-                [Posta Kodu und Stadt / Deutschland]
-              </p>
-              <h4 className="font-semibold text-charcoal text-base mt-4">Kontakt:</h4>
-              <p className="pl-2 border-l-2 border-gray-200 my-2">
-                Telefon: 0176 24003253<br />
-                E-Mail: i.nelly@hotmail.de
-              </p>
-              <h4 className="font-semibold text-charcoal text-base mt-4">Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV:</h4>
-              <p className="pl-2 border-l-2 border-gray-200 my-2">
-                <strong>[Kiralayacağınız Resmi Ad Soyad]</strong><br />
-                [Kiralık İşletme/Servis Adresi]<br />
-                [Posta Kodu und Stadt / Deutschland]
-              </p>
-              <p className="text-xs text-gray-400 mt-6 pt-2 border-t">Quelle: e-recht24.de</p>
-            </>,
-            <>
-              <h4 className="font-semibold text-charcoal text-base">Alman Dijital Hizmetler Yasası (DDG) § 5 uyarınca bilgiler:</h4>
-              <p className="pl-2 border-l-2 border-gray-200 my-2">
-                <strong>[Kiralayacağınız Resmi Ad Soyad]</strong><br />
-                [Kiralık İşletme/Servis Adresi]<br />
-                [Posta Kodu ve Şehir / Almanya]
-              </p>
-              <h4 className="font-semibold text-charcoal text-base mt-4">İletişim:</h4>
-              <p className="pl-2 border-l-2 border-gray-200 my-2">
-                Telefon: 0176 24003253<br />
-                E-Mail: i.nelly@hotmail.de
-              </p>
-              <h4 className="font-semibold text-charcoal text-base mt-4">MStV § 18 Abs. 2 uyarınca içerikten sorumlu kişi:</h4>
-              <p className="pl-2 border-l-2 border-gray-200 my-2">
-                <strong>[Kiralayacağınız Resmi Ad Soyad]</strong><br />
-                [Kiralık İşletme/Servis Adresi]<br />
-                [Posta Kodu ve Şehir / Almanya]
-              </p>
-            </>
-          )}
+          <div>
+            <h4 className="font-semibold text-charcoal text-base">
+              {t('Angaben gemäß § 5 DDG:', 'Alman Dijital Hizmetler Yasası (DDG) § 5 uyarınca bilgiler:')}
+            </h4>
+            <p className="pl-2 border-l-2 border-gray-200 my-2">
+              <strong>[Kiralayacağınız Resmi Ad Soyad]</strong><br />
+              [Kiralık İşletme/Servis Adresi]<br />
+              [Posta Kodu und Stadt / Şehir / Deutschland]
+            </p>
+            <h4 className="font-semibold text-charcoal text-base mt-4">
+              {t('Kontakt:', 'İletişim:')}
+            </h4>
+            <p className="pl-2 border-l-2 border-gray-200 my-2">
+              {t('Telefon:', 'Telefon:')} 0176 24003253<br />
+              E-Mail: i.nelly@hotmail.de
+            </p>
+            <h4 className="font-semibold text-charcoal text-base mt-4">
+              {t('Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV:', 'MStV § 18 Abs. 2 uyarınca içerikten sorumlu kişi:')}
+            </h4>
+            <p className="pl-2 border-l-2 border-gray-200 my-2">
+              <strong>[Kiralayacağınız Resmi Ad Soyad]</strong><br />
+              [Kiralık İşletme/Servis Adresi]<br />
+              [Posta Kodu und Stadt / Şehir / Deutschland]
+            </p>
+            <p className="text-gray-400 text-[11px] mt-6 pt-2 border-t">Quelle: e-recht24.de</p>
+          </div>
         </FooterModal>
       )}
 
       {showDatenschutz && (
         <FooterModal title={t('Datenschutzerklärung', 'Gizlilik Politikası')} onClose={() => setShowDatenschutz(false)}>
-          {t(
-            <>
-              <h4 className="font-semibold text-charcoal text-base">1. Datenschutz auf einen Blick</h4>
-              <p>Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften (DSGVO).</p>
-              <h4 className="font-semibold text-charcoal text-base mt-4">2. Hosting und CDN (Cloudflare)</h4>
-              <p>Wir hosten unsere Website bei Cloudflare Pages. Anbieter ist die Cloudflare Inc., 101 Townsend St., San Francisco, CA 94107, USA. Technisch wird der Informationsverkehr zwischen Ihrem Browser und unserer Website über das Netzwerk von Cloudflare geleitet, um die Sicherheit und Stabilität zu gewährleisten. Hierbei können Logfiles inklusive Ihrer IP-Adresse verarbeitet werden. Dies erfolgt auf Grundlage unseres berechtigten Interesses an einer sicheren Bereitstellung (Art. 6 Abs. 1 lit. f DSGVO).</p>
-              <h4 className="font-semibold text-charcoal text-base mt-4">3. Verantwortliche Stelle</h4>
+          <div className="space-y-4 text-sm text-charcoal/80 leading-relaxed">
+            <div>
+              <h4 className="font-semibold text-charcoal text-base">
+                {t('1. Datenschutz auf einen Blick', '1. Bir Bakışta Veri Koruma')}
+              </h4>
+              <p>
+                {t(
+                  'Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften (DSGVO).',
+                  'Bu sitenin işletmecisi kişisel verilerinizin korunmasını çok ciddiye almaktadır. Kişisel verilerinizi gizli tutuyor ve yasal veri koruma düzenlemelerine (GDPR/DSGVO) uygun olarak işliyoruz.'
+                )}
+              </p>
+            </div>
+            <div>
+              <h4 className="font-semibold text-charcoal text-base mt-4">
+                {t('2. Hosting und CDN (Cloudflare)', '2. Barındırma ve CDN (Cloudflare)')}
+              </h4>
+              <p>
+                {t(
+                  'Wir hosten unsere Website bei Cloudflare Pages. Anbieter ist die Cloudflare Inc., 101 Townsend St., San Francisco, CA 94107, USA. Technisch wird der Informationsverkehr zwischen Ihrem Browser und unserer Website über das Netzwerk von Cloudflare geleitet, um die Sicherheit und Stabilität zu gewährleisten. Hierbei können Logfiles inklusive Ihrer IP-Adresse verarbeitet werden. Dies erfolgt auf Grundlage unseres berechtigten Interesses an einer sicheren Bereitstellung (Art. 6 Abs. 1 lit. f DSGVO).',
+                  'Web sitemiz Cloudflare Pages (Cloudflare Inc., 101 Townsend St., San Francisco, CA 94107, USA) üzerinde barındırılmaktadır. Sitenin güvenliğini ve hızını sağlamak adına tarayıcınız ile sitemiz arasındaki trafik Cloudflare ağı üzerinden iletilir. Bu işlem sırasında IP adresiniz dahil olmak üzere teknik log dosyaları işlenebilir. Bu, Art. 6 Abs. 1 lit. f DSGVO uyarınca meşru menfaatimize dayanmaktadır.'
+                )}
+              </p>
+            </div>
+            <div>
+              <h4 className="font-semibold text-charcoal text-base mt-4">
+                {t('3. Verantwortliche Stelle', '3. Sorumlu Kişi')}
+              </h4>
               <p className="pl-2 border-l-2 border-gray-200 my-2">
                 <strong>[Kiralayacağınız Resmi Ad Soyad]</strong><br />
                 [Kiralık İşletme/Servis Adresi]<br />
                 E-Mail: i.nelly@hotmail.de
               </p>
-              <h4 className="font-semibold text-charcoal text-base mt-4">4. Ihre Rechte</h4>
-              <p>Sie hat jederzeit das Recht auf unentgeltliche Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten sowie ein Recht auf Berichtigung oder Löschung dieser Daten.</p>
-            </>,
-            <>
-              <h4 className="font-semibold text-charcoal text-base">1. Bir Bakışta Veri Koruma</h4>
-              <p>Bu sitenin işletmecisi kişisel verilerinizin korunmasını çok ciddiye almaktadır. Kişisel verilerinizi gizli tutuyor ve yasal veri koruma düzenlemelerine (GDPR/DSGVO) uygun olarak işliyoruz.</p>
-              <h4 className="font-semibold text-charcoal text-base mt-4">2. Barındırma ve CDN (Cloudflare)</h4>
-              <p>Web sitemiz Cloudflare Pages (Cloudflare Inc., 101 Townsend St., San Francisco, CA 94107, USA) üzerinde barındırılmaktadır. Sitenin güvenliğini ve hızını sağlamak adına tarayıcınız ile sitemiz arasındaki trafik Cloudflare ağı üzerinden iletilir. Bu işlem sırasında IP adresiniz dahil olmak üzere teknik log dosyaları işlenebilir. Bu, Art. 6 Abs. 1 lit. f DSGVO uyarınca meşru menfaatimize dayanmaktadır.</p>
-              <h4 className="font-semibold text-charcoal text-base mt-4">3. Sorumlu Kişi</h4>
-              <p className="pl-2 border-l-2 border-gray-200 my-2">
-                <strong>[Kiralayacağınız Resmi Ad Soyad]</strong><br />
-                [Kiralık İşletme/Servis Adresi]<br />
-                E-Mail: i.nelly@hotmail.de
+            </div>
+            <div>
+              <h4 className="font-semibold text-charcoal text-base mt-4">
+                {t('4. Ihre Rechte', '4. Haklarınız')}
+              </h4>
+              <p>
+                {t(
+                  'Sie haben jederzeit das Recht auf unentgeltliche Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten sowie ein Recht auf Berichtigung oder Löschung dieser Daten.',
+                  'Kişisel verilerinizin kaynağı, alıcısı ve işlenme amacı hakkında her zaman ücretsiz bilgi alma, ayrıca bu verilerin düzeltilmesini veya silinmesini talep etme hakkına sahipsiniz.'
+                )}
               </p>
-              <h4 className="font-semibold text-charcoal text-base mt-4">4. Haklarınız</h4>
-              <p>Kişisel verilerinizin kaynağı, alıcısı ve işlenme amacı hakkında her zaman ücretsiz bilgi alma, ayrıca bu verilerin düzeltilmesini veya silinmesini talep etme hakkına sahipsiniz.</p>
-            </>
-          )}
+            </div>
+          </div>
         </FooterModal>
       )}
     </>
