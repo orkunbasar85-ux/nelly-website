@@ -114,7 +114,7 @@ export function ContactSection() {
               </a>
 
               <a
-                href="mailto:info@nellymedium.de"
+                href="mailto:i.nelly@hotmail.de"
                 className="flex items-center gap-4 p-5 rounded-lg bg-beige-50 shadow-sm hover:shadow-md transition-all duration-300 group"
               >
                 <div className="w-12 h-12 rounded-full gold-gradient flex items-center justify-center shadow-sm flex-shrink-0">
@@ -122,7 +122,7 @@ export function ContactSection() {
                 </div>
                 <div>
                   <p className="text-sm text-charcoal/60">E-Mail</p>
-                  <p className="text-charcoal font-medium group-hover:text-gold-dark transition-colors">info@nellymedium.de</p>
+                  <p className="text-charcoal font-medium group-hover:text-gold-dark transition-colors">i.nelly@hotmail.de</p>
                 </div>
               </a>
             </div>
@@ -209,7 +209,7 @@ export function ContactSection() {
                 </button>
               )}
 
-              {/* YASAL STANDARTLARA UYGUN GİZLİLİK ONAY METNİ */}
+              {/* YASAL ONAY METNİ */}
               <p className="text-[11px] text-charcoal/50 text-center leading-relaxed mt-3">
                 {t(
                   'Mit dem Absenden erklären Sie sich mit der Verarbeitung Ihrer Daten gemäß unserer Datenschutzerklärung einverstanden.',
