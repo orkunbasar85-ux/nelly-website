@@ -114,7 +114,7 @@ export function ContactSection() {
               </a>
 
               <a
-                href="mailto:i.nelly@hotmail.de"
+                href="mailto:info@nellymedium.com"
                 className="flex items-center gap-4 p-5 rounded-lg bg-beige-50 shadow-sm hover:shadow-md transition-all duration-300 group"
               >
                 <div className="w-12 h-12 rounded-full gold-gradient flex items-center justify-center shadow-sm flex-shrink-0">
@@ -122,7 +122,7 @@ export function ContactSection() {
                 </div>
                 <div>
                   <p className="text-sm text-charcoal/60">E-Mail</p>
-                  <p className="text-charcoal font-medium group-hover:text-gold-dark transition-colors">i.nelly@hotmail.de</p>
+                  <p className="text-charcoal font-medium group-hover:text-gold-dark transition-colors">info@nellymedium.com</p>
                 </div>
               </a>
             </div>
